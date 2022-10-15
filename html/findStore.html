@@ -1,0 +1,224 @@
+<? include("../include/header.html"); ?>
+
+<div class="findStore">
+  <main class="findStoreCont">
+    <section class="findSection">
+      <!-- <h2 class="hidden">매장찾기 검색</h2> -->
+      <ul class="findBtns">
+        <li class="findBtnActive">
+          <button>주변에서 찾기</button>
+        </li>
+        <li class="findBtn">
+          <button>검색해서 찾기</button>
+        </li>
+      </ul>
+      <div class="findItems">
+        <div class="findItemDisplay">
+          <!-- <p class="searchInput">
+            <label for="searchStore" class="hidden">검색해서 찾기</label>
+            <input id="searchStore" type="search" placeholder="주소 또는 매장명으로 검색해보세요.">
+            <img src="../images/contents/icon-search.png" alt="searchIcon">
+          </p> -->
+          <ul class="classifyBtns">
+            <li class="classifyBtn">
+              <button>와이파이</button>
+            </li>
+            <li class="classifyBtn">
+              <button>주차장</button>
+            </li>
+            <li class="classifyBtn">
+              <button>보청기</button>
+            </li>
+          </ul>
+          <div class="findResultComment">
+            <p>
+              <em>총 15개의 매장이 검색되었습니다.</em>
+            </p>
+          </div>
+          <div class="findResultItems">
+            <div class="findResultItemWrap">
+              <div class="findResultItem">
+                <a href="#">
+                  <h3>명동점</h3>
+                </a>
+                <div class="findResultItemDesc">
+                  <p>
+                    <span>서울 중구 소공로 62 동암빌딩</span>
+                  </p>
+                  <p>02-752-1074</p>
+                  <div class="classifyItems">
+                    <em class="classifyItem">
+                      <div class="storeIconWrapWifiIcon">
+                        <img src="../images/contents/icon-store-wifi.png" alt="icon" />
+                      </div>
+                      <span>와이파이</span>
+                    </em>
+                    <em class="classifyItem02">
+                      <div class="storeIconWrapParkingIcon">
+                        <img src="../images/contents/icon-store-park.png" alt="icon" />
+                      </div>
+                      <span>주차장</span>
+                    </em>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="findResultItemWrap">
+              <div class="findResultItem">
+                <a href="#">
+                  <h3>남포점</h3>
+                </a>
+                <div class="findResultItemDesc">
+                  <p>
+                    <span>부산 중구 중구로 3</span>
+                  </p>
+                  <p>051-245-2131</p>
+                  <div class="classifyItems">
+                    <em class="classifyItem">
+                      <div class="storeIconWrapWifiIcon">
+                        <img src="../images/contents/icon-store-wifi.png" alt="icon" />
+                      </div>
+                      <span>와이파이</span>
+                    </em>
+                    <em class="classifyItem02">
+                      <div class="storeIconWrapParkingIcon">
+                        <img src="../images/contents/icon-store-park.png" alt="icon" />
+                      </div>
+                      <span>주차장</span>
+                    </em>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="findResultItemWrap">
+              <div class="findResultItem">
+                <a href="#">
+                  <h3>영도점</h3>
+                </a>
+                <div class="findResultItemDesc">
+                  <p>
+                    <span>부산 영도구 태종로 92</span>
+                  </p>
+                  <p>051-416-4551</p>
+                  <div class="classifyItems">
+                    <em class="classifyItem">
+                      <div class="storeIconWrapWifiIcon">
+                        <img src="../images/contents/icon-store-wifi.png" alt="icon" />
+                      </div>
+                      <span>와이파이</span>
+                    </em>
+                    <em class="classifyItem02">
+                      <div class="storeIconWrapParkingIcon">
+                        <img src="../images/contents/icon-store-park.png" alt="icon" />
+                      </div>
+                      <span>주차장</span>
+                    </em>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="findResultItemWrap">
+              <div class="findResultItem">
+                <a href="#">
+                  <h3>수정점</h3>
+                </a>
+                <div class="findResultItemDesc">
+                  <p>
+                    <span>부산 동구 고관로 105-1</span>
+                  </p>
+                  <p>051-465-6363</p>
+                  <div class="classifyItems">
+                    <em class="classifyItem">
+                      <div class="storeIconWrapWifiIcon">
+                        <img src="../images/contents/icon-store-wifi.png" alt="icon" />
+                      </div>
+                      <span>와이파이</span>
+                    </em>
+                    <em class="classifyItem02">
+                      <div class="storeIconWrapParkingIcon">
+                        <img src="../images/contents/icon-store-park.png" alt="icon" />
+                      </div>
+                      <span>주차장</span>
+                    </em>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- <div id="map"></div> -->
+    <section id="map"></section>
+  </main>  
+</div>
+
+
+<script>
+  const container = document.querySelector("#map"); //지도를 담을 영역의 DOM 레퍼런스
+  const options = {
+    //지도를 생성할 때 필요한 기본 옵션
+    center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+    level: 3, //지도의 레벨(확대, 축소 정도)
+  };
+
+  const map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+  const imageSrc = "../images/contents/icon-sub-marker.png", // 마커이미지의 주소입니다
+    imageSize = new kakao.maps.Size(45, 45), // 마커이미지의 크기입니다
+    imageOption = { offset: new kakao.maps.Point(32, 64) };
+
+  const tisInfo = `<div class="overlay">
+      <a href="" class="info">        
+        <p class="address">구로디지털단지역점</p>
+      </a>
+    </div>`;
+
+  // 주소-좌표 변환 객체를 생성합니다
+  const geocoder = new kakao.maps.services.Geocoder();
+
+  // 주소로 좌표를 검색합니다
+  geocoder.addressSearch("서울특별시 관악구 시흥대로 570", function (result, status) {
+    // 정상적으로 검색이 완료됐으면
+    if (status === kakao.maps.services.Status.OK) {
+      const coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+      // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+      const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+        markerPosition = coords; // 마커가 표시될 위치입니다
+
+      // 마커를 생성합니다
+      const marker = new kakao.maps.Marker({
+        position: markerPosition,
+        image: markerImage, // 마커이미지 설정
+      });
+
+      // 마커가 지도 위에 표시되도록 설정합니다
+      marker.setMap(map);
+
+      // 커스텀 오버레이를 생성합니다
+      var customOverlay = new kakao.maps.CustomOverlay({
+        position: coords,
+        content: tisInfo,
+        xAnchor: 0.55,
+        yAnchor: 2,
+      });
+
+      // 커스텀 오버레이를 지도에 표시합니다
+      customOverlay.setMap(map);
+
+      // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+      map.setCenter(coords);
+    }
+  });
+
+  const header = document.querySelector("#header");
+  
+  window.addEventListener("scroll", function () {
+    if (window.scrollY >= 0) {
+      header.classList.add("scroll");
+    } 
+  });
+
+header.classList.add('scroll');
+</script>
+<? include("../include/footer.html"); ?>

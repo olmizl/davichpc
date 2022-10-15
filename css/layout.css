@@ -1,0 +1,334 @@
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #222;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+#header {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  font-size: 17px;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+#header:hover {
+  color: #000;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #fff;
+}
+#header:hover .site01 {
+  background-color: #222;
+  border-radius: 50px;
+}
+#header:hover .site02 {
+  background-color: #0056aa;
+  border-radius: 50px;
+}
+#header:hover .container #logo a {
+  background-image: url("../images/common/logo_blue.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#header.scroll {
+  color: #000;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #fff;
+}
+#header.scroll .site01 {
+  background-color: #222;
+  border-radius: 50px;
+}
+#header.scroll .site02 {
+  background-color: #0056aa;
+  border-radius: 50px;
+}
+#header.scroll .depth02 {
+  display: block;
+}
+#header.scroll #logo a {
+  background-image: url("../images/common/logo_blue.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#header #logo {
+  width: 165px;
+  height: 40px;
+}
+#header #logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: background-color 0.3s ease-in-out;
+  background-image: url("../images/common/logo_white.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#header .container {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header #gnb {
+  width: 100%;
+  flex: 1;
+  position: relative;
+}
+#header #gnb .list {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  text-align: center;
+}
+#header #gnb .list > li:hover .depth01:after {
+  transform: scaleX(1);
+}
+#header #gnb .list > li:hover .depth02 {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  pointer-events: auto;
+}
+#header #gnb .list > li .depth01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  position: relative;
+  padding: 28px 20px;
+  font-size: 17px;
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+#header #gnb .list > li .depth01:hover {
+  color: #0056aa;
+}
+#header #gnb .list > li .depth01:hover:after {
+  z-index: 100;
+  transform: scaleX(1);
+  transition: background-color 0.3s ease-in-out;
+}
+#header #gnb .list > li .depth01:after {
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  transform: scaleX(0);
+  content: "";
+  background-color: #0056aa;
+}
+#header #gnb .list > li .depth02 {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  font-size: 17px;
+  text-align: center;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  pointer-events: none;
+  line-height: 60px;
+  padding: 0 100%;
+  top: 81px;
+}
+#header #gnb .list > li .depth02 li {
+  display: inline-flex;
+  margin-right: 30px;
+  height: 100%;
+}
+#header #gnb .list > li .depth02 li a {
+  padding: 10px 0;
+  font-weight: 500;
+}
+#header .site {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  color: #fff;
+}
+#header .site a {
+  position: relative;
+}
+#header .site a p {
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+#header .site .site01 {
+  padding: 10px 15px;
+  margin-right: 10px;
+}
+#header .site .site02 {
+  padding: 10px 30px 10px 15px;
+}
+#header .site .site02:after {
+  display: block;
+  position: absolute;
+  content: "";
+  font-family: "Material Icons";
+  content: "north_east";
+  display: inline-block;
+  margin-left: 0;
+  top: 9px;
+  right: 10px;
+}
+
+#footer {
+  width: 100%;
+  display: flex;
+  padding: 70px 0;
+  background-color: #f9f9f9;
+}
+#footer .fTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .fTop .utilMenu {
+  display: flex;
+}
+#footer .fTop .utilMenu li {
+  margin-right: 40px;
+}
+#footer .fTop .utilMenu li a {
+  font-weight: 500;
+}
+#footer .fTop .utilMenu li a:hover {
+  font-weight: 600;
+  text-decoration: underline;
+}
+#footer .fTop .snsMenu {
+  display: flex;
+}
+#footer .fTop .snsMenu li {
+  margin-left: 25px;
+}
+#footer .fTop .snsMenu li:last-child a {
+  width: 25px;
+  height: 21px;
+  position: relative;
+  top: 2px;
+}
+#footer .fTop .snsMenu li a {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+#footer .fTop .snsMenu li a img {
+  width: 100%;
+  height: 100%;
+}
+#footer .fBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+#footer .fBottom .addressBox .title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+#footer .fBottom .addressBox .address {
+  margin: 35px 0;
+}
+#footer .fBottom .addressBox .address div {
+  margin-top: 10px;
+}
+#footer .fBottom .addressBox .address div span {
+  position: relative;
+  color: #555;
+  margin-right: 18px;
+}
+#footer .fBottom .addressBox .address div span:before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 15px;
+  background-color: #888;
+  top: 6px;
+  right: -12px;
+}
+#footer .fBottom .addressBox .address div span:last-child:before {
+  display: none;
+}
+#footer .fBottom .addressBox .copyright {
+  font-size: 14px;
+  color: #888;
+}
+#footer .fBottom .familySite {
+  position: absolute;
+  right: 0;
+}
+#footer .fBottom .familySite .familyBtn {
+  color: #555;
+  border: 1px solid #dedede;
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  font-weight: 400;
+}
+#footer .fBottom .familySite .familyBtn:after {
+  font-family: "Material Icons";
+  content: "keyboard_arrow_up";
+  display: inline-block;
+  margin-left: 0;
+  padding-left: 100px;
+  font-size: 22px;
+}
+#footer .fBottom .familySite .familyBtn.on {
+  background-color: #fff;
+}
+#footer .fBottom .familySite .familyBtn.on:after {
+  transform: rotateX(180deg);
+}
+#footer .fBottom .familySite .familyLink {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: #555;
+  border: 1px solid #dedede;
+  border-bottom: none;
+  width: 100%;
+  text-align: left;
+  background-color: #fff;
+  bottom: 49px;
+  box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+#footer .fBottom .familySite .familyLink a {
+  padding: 13px 20px;
+}
+#footer .fBottom .familySite .familyLink.on {
+  opacity: 1;
+  pointer-events: all;
+}

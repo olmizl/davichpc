@@ -1,0 +1,340 @@
+@charset "UTF-8";
+#inquiryFranchise .inqFran {
+  font-size: 20px;
+}
+#inquiryFranchise .inqFran .inqFran_contents {
+  display: flex;
+}
+#inquiryFranchise .inqFran .inqFran_contents .franchise_title {
+  width: 250px;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.75px;
+  line-height: 37px;
+  flex-shrink: 0;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form {
+  border-top: 1px solid #222;
+  margin-bottom: 80px;
+  flex-grow: 1;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl {
+  display: flex;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl:nth-child(1) {
+  margin-top: 10px;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl .point {
+  color: #00adef;
+  margin-left: 5px;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl dt {
+  font-weight: 500;
+  width: 200px;
+  padding: 24px 0;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl dd {
+  display: flex;
+  flex-grow: 1;
+  font-size: 20px;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl dd .label_half {
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl dd .label_half .half {
+  width: 33%;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl dd .label_half:after {
+  content: "@";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 30%;
+  top: 30%;
+  color: #0056aa;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl dd .label_half span {
+  display: none;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl dd .label {
+  width: 100%;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl dd .label .text_input02:after {
+  content: "원";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 0;
+  background-color: #0056aa;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl dd .text_input01 {
+  position: relative;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner dl dd .text_input01:after {
+  content: "년차";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 0;
+  background-color: #0056aa;
+  z-index: 99;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner input[type=text],
+#inquiryFranchise .inqFran .inqFran_contents .form .inner select,
+#inquiryFranchise .inqFran .inqFran_contents .form .inner textarea {
+  width: 100%;
+  height: 70px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 18px;
+  outline: none;
+  padding: 20px auto;
+  font-weight: 700;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner input[type=text]:focus,
+#inquiryFranchise .inqFran .inqFran_contents .form .inner select:focus,
+#inquiryFranchise .inqFran .inqFran_contents .form .inner textarea:focus {
+  border-bottom-color: #0056aa;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner input[type=text]::placeholder,
+#inquiryFranchise .inqFran .inqFran_contents .form .inner select::placeholder,
+#inquiryFranchise .inqFran .inqFran_contents .form .inner textarea::placeholder {
+  color: #ccc;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner textarea {
+  height: 200px;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form .inner select {
+  cursor: pointer;
+  outline: transparent;
+  -webkit-appearance: none;
+  background: transparent;
+  position: relative;
+  background-image: url("../images/contents/icon-selectbox.png");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: 25px 10px;
+}
+#inquiryFranchise .inqFran .inqFran_contents .txts {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 1150px;
+  font-size: 16px;
+  word-spacing: 20%;
+  border-bottom: 1px solid #ccc;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+#inquiryFranchise .inqFran .inqFran_contents .txts .txt_long {
+  color: #999;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#inquiryFranchise .inqFran .inqFran_contents .txts .txt_long p {
+  margin-bottom: 50px;
+  line-height: 1.7;
+}
+#inquiryFranchise .inqFran .inqFran_contents .form02 {
+  border-top: none;
+}
+#inquiryFranchise .inqFran .btn {
+  background-color: #fff;
+  margin: 100px auto;
+  cursor: pointer;
+}
+
+.agreeChk {
+  margin-top: 20px;
+}
+
+.input {
+  display: none;
+}
+
+.labelChk {
+  margin: 0 15px -5px 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  display: inline-block;
+  position: relative;
+}
+
+.input:checked + .labelChk::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../images/contents/icon-form-checkbox.jpg") 50% 50% no-repeat;
+  background-size: 100% auto;
+}
+
+.hp_input {
+  position: relative;
+}
+.hp_input .hp_btn {
+  position: absolute;
+  height: 50px;
+  width: 140px;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+  color: #ccc;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+#recruit .hp_input {
+  position: relative;
+}
+#recruit .hp_input .hp_btn {
+  top: -7px;
+}
+#recruit .radio {
+  width: 50%;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+#recruit .radio :checked {
+  color: #0056aa;
+}
+#recruit .radio input[type=radio] {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.giftCardSort {
+  display: flex;
+  padding: 26px 0 35px 0;
+}
+.giftCardSort strong {
+  flex-shrink: 0;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.66px;
+}
+.giftCardSort strong span {
+  display: inline-block;
+  margin-left: 4px;
+  color: #00adef;
+}
+.giftCardSort .giftCardNumber {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.giftCardSort .giftCardNumber .numberItem {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.54px;
+}
+.giftCardSort .giftCardNumber .numberItem label {
+  width: 150px;
+  line-height: 40px;
+}
+.giftCardSort .giftCardNumber .numberItem .counting {
+  display: flex;
+  align-items: center;
+}
+.giftCardSort .giftCardNumber .numberItem .counting .minus {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  font-family: Noto Sans KR, sans-serif;
+  cursor: pointer;
+  color: #222;
+  font-size: 16px;
+  padding: 0;
+  background-color: transparent;
+}
+.giftCardSort .giftCardNumber .numberItem .counting input {
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.54px;
+  border: 1px solid #ccc;
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  text-align: end;
+  background-color: transparent;
+}
+.giftCardSort .giftCardNumber .numberItem .counting .plus {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  font-family: Noto Sans KR, sans-serif;
+  cursor: pointer;
+  color: #222;
+  font-size: 16px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.depositInfo {
+  display: flex;
+}
+.depositInfo strong {
+  flex-shrink: 0;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.66px;
+}
+.depositInfo strong span {
+  display: inline-block;
+  margin-left: 4px;
+  color: #00adef;
+}
+.depositInfo .depositInfoSpec .totalPrice {
+  color: #0056aa;
+  font-size: 35px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.86;
+  letter-spacing: -1.05px;
+  margin-bottom: 11px;
+  display: block;
+}
+.depositInfo .depositInfoSpec .bankInfo {
+  color: #0056aa;
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.76;
+  letter-spacing: -0.51px;
+  display: block;
+}
+.depositInfo .depositInfoSpec .priceNotice {
+  font-size: 17px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.76;
+  letter-spacing: -0.51px;
+  display: block;
+}
+
+.noticeForm {
+  margin-top: 52px;
+  padding: 30px 20px;
+  background-color: #f0f8ff;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.54px;
+}
